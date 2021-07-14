@@ -1,0 +1,478 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* background-color: #faf3e6; */
+  }
+
+@font-face { font-family: 'Abyssopelagic'; 
+  src: url(./abyssopelagic.otf) format('opentype'); } 
+
+
+
+
+/* all text default sizes, color, font, weight */
+
+h1, h2, h3, p, a {
+  color: black;
+  text-decoration: none;
+  letter-spacing: 0.15em;
+  font-weight: 900;
+}
+
+h1, h2, h3 , li{
+  font-family: "Abyssopelagic", sans-serif;
+  text-align: center;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+body {
+  background-color: #faf3e6;
+}
+
+/* text hover class */
+
+.text-hover:hover {
+  color: gray;
+  transition: 0.25s;;
+}
+
+/* next section */
+
+  /* header */
+  .logo {
+    width: 130px;
+    height: auto;
+  }
+  
+.left-header, .right-header {
+    width: 300px;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid blue; */
+  }
+
+.left-header {
+    width: 220px;
+}
+  
+header {
+    /* background-color: lightblue; */
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+.top-header {
+    display: inline-flex;
+}
+
+.lower-header {
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+}
+  
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: pink;  */
+  }
+  
+nav ul li, .right-header li {
+    display: inline-block;
+    /* min-width: 100px; */
+    /* border: 1px solid black; */
+    text-align: center;
+    /* margin: 0 10px; */
+    font-size: 18px;
+    font-weight: 600;
+    padding: 20px 15px;
+  }
+
+.hamburger-container {
+    display: none;
+    width: 0%;
+  }
+
+.hamburger {
+    display: none;
+  }
+
+/* header @max width 850px */
+
+@media only screen and (max-width: 875px) {
+    header {
+        flex-direction: column;
+    }
+
+    .lower-header {
+        flex-direction: column;
+        display: none;
+    }
+
+    .navbar {
+        flex-direction: column;
+        /* border: 2px dotted green; */
+        width: 100%;
+        /* background-color:#f8f8f8; */
+    }
+
+    .nav-links {
+      width: 100%;
+    }
+
+    .nav-links li {
+        width: 100%;
+        padding: 20px 0px;
+        border: 1px solid #3a3a3a;
+        border-width: 1px 0px 0px 0px;
+        margin: 0;
+    }
+
+    #about-top-menu {
+        border-width: 1px 0px;
+    }
+
+    .right-header {
+        /* border: 2px dotted red; */
+        height: auto;
+        width: 100%;
+        /* background-color:#f8f8f8; */
+    }
+ 
+    .hamburger {
+        /* position: absolute; */
+        /* top: 10px;
+        right: 20px; */
+        flex-direction: column;
+        justify-content: space-between;
+        height: 30px;
+        display: flex;
+        /* border: 2px dotted red; */
+        margin: 30px;
+        cursor: pointer;
+    }
+
+    .hamburger:hover > .line {
+        background-color: gray;
+        transition: 0.25s; 
+    }
+
+    .line {
+        height: 3px;
+        width: 30px;
+        background-color:black;
+        border-radius: 10px;
+        /* margin: 5px; */
+    }
+
+    .hamburger-container {
+        display: flex;
+        /* border: 3px solid blue; */
+        width: 100%;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .lower-header.active {
+        display: flex;
+    }   
+}
+
+/* main body */
+
+
+.body {
+    /* border: 3px solid blue; */
+    width: 100%;
+    padding: 0px 30px;
+}
+
+.title {
+    /* border: 2px solid black; */
+    padding: 10px 40px 30px 40px;
+}
+
+.quote-author {
+    text-align: end;
+    padding: 10px 0px;
+}
+
+.single {
+    width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+    /* border: 2px dotted red; */
+}
+
+.photo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.photo-background {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#first-photo {
+  padding: 30px 0px 30px 0px;
+}
+
+.double {
+  display: inline-flex;
+  padding-bottom: 30px;
+}
+
+.double-left, .double-right {
+  width: 50%;
+}
+
+.double-left {
+  padding-right: 15px;
+}
+
+.double-right {
+  padding-left: 15px;
+}
+
+.six {
+  display: inline-flex;
+  padding-bottom: 30px;
+  width: 100%;
+}
+
+.six-left {
+  width: 50%;
+  padding-right: 15px;
+}
+
+.six-right {
+  width: 50%;
+  padding-left: 15px;
+}
+
+.six-right-one, .six-left-one, .six-left-two, .six-right-two {
+  padding-bottom: 30px;
+}
+
+/* sections */
+
+.sections {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section-container {
+  width: 50%;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 2px dotted rebeccapurple; */
+}
+
+.photo-background {
+  width: 39vw;
+  height: 26vw;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  width: 70%;
+  border-radius: 5px;
+  background-color: #ffffff6e;
+}
+
+.button:hover {
+  background-color: #242e2ea3;
+  transition: 0.25s;
+}
+
+.button h3 {
+  padding: 10px 0px;
+}
+
+.button:hover h3 {
+  color: #ffffff6e;
+  transition: all ease-in-out 0.25s;
+}
+
+
+
+#joy {
+  background-image: url(./images/photography_website_pictures/commissions_covers/Joy7.jpg);
+}
+
+#julia {
+  background-image: url(./images/photography_website_pictures/commissions_covers/julia2.jpg);
+}
+
+#fabi {
+  background-image: url(./images/photography_website_pictures/commissions_covers/fabi_cover.jpg);
+}
+
+#petsyoga {
+  background-image: url(./images/photography_website_pictures/commissions_covers/pets_yoga19.jpg);
+}
+
+#fashion {
+  background-image: url(./images/photography_website_pictures/commissions_covers/fashion_cover.jpg);
+}
+
+#pets {
+  background-image: url(https://www.amazon.co.uk/photos/share/pLbEy2qXVMnfyiKP3tQuGTSVUuMYyW70GqyHI9BfXce);
+}
+
+#skateboarding {
+  background-image: url(./images/photography_website_pictures/commissions_covers/skate_cover.JPG);
+}
+
+#chandos {
+  background-image: url(./images/photography_website_pictures/commissions_covers/stupidcake.jpg);
+}
+
+#portraits {
+  background-image: url(./images/photography_website_pictures/portfolio_covers/portraits_cover.jpg);
+}
+
+#nature {
+  background-image: url(./images/photography_website_pictures/portfolio_covers/nature_cover.jpg);
+}
+
+#film {
+  background-image: url(./images/photography_website_pictures/portfolio_covers/film_cover.jpg);
+}
+
+/* blog */
+
+.blog-body {
+  background-color: white;
+  padding: 20px;
+}
+
+.blog-item {
+  border: 1px solid darkgray;
+  display: inline-flex;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.blog-item:hover h2 {
+  color: gray;
+  transition: 0.25s;
+}
+
+.blog-item img {
+  width: 40%;
+  height: auto;
+}
+
+.blog-text {
+  padding: 20px;
+  /* background-color: lightgray; */
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-text h2, .name-date, .caption {
+  padding: 10px;
+  text-align: start;
+  /* font-family: "Lato"; */
+}
+
+.name-date, .caption {
+  color: #2f2e2e;
+}
+
+.blog-line {
+  width: 100%;
+  background-color: darkgray;
+  height: 2px;
+  margin: 10px;
+}
+
+/* about and contact */
+
+.about-photo-and {
+  display: inline-flex;
+  padding: 30px
+}
+
+.about-photo-and img {
+  width: 50%;
+  height: auto;
+}
+
+.about-text-half {
+  padding-left: 30px;
+}
+
+.about-text-second {
+  padding: 0px 30px;
+}
+
+.contact-info {
+  padding: 0px 30px;
+}
+
+.contact-title {
+  padding: 100px 30px 20px 30px;
+}
+
+.contact-title h2 {
+  text-align: start;
+}
+
+.contact-info div {
+  padding: 10px 0px;
+}
+
+
+
+/* footer */
+
+footer {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 3px dotted green; */
+}
+
+footer i {
+  text-align: center;
+  /* padding-bottom: 15px; */
+  padding-left: 10px;
+}
